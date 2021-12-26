@@ -32,7 +32,6 @@ describe('Fitur Master Mapel', () => {
         cy.get('.btn-danger').click();
         cy.get('.toast-message').should('be.visible')
         cy.contains('No data available in table').should("be.visible")
-
     })
     it('Restore trash mapel', () => {
         //hapus data mapel
@@ -122,5 +121,10 @@ describe('Fitur Master Mapel', () => {
         cy.get('.btn-success').click();
         cy.get('.toast-message').should('be.visible');
         cy.contains('No data available in table').should("be.visible")
+
+        //cek data kembali
+        cy.get('#MasterData').click();
+        cy.get('#liMasterData > ul > li:nth-child(6)').click();
+        cy.contains('Admin').should("be.visible")
     })
 })
