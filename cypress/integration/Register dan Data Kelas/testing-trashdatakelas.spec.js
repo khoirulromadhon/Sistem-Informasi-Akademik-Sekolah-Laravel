@@ -28,7 +28,7 @@ describe("akses menu trash", () => {
     });
 
 
-    it("akses button RESTORE", () => {
+    it("akses button restore", () => {
         cy.visit('login');
         cy.get('input[name=email]').type("admin@gmail.com");
         cy.wait(5000)
