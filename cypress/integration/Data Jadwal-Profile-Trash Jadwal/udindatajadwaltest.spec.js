@@ -49,10 +49,10 @@ describe("Melakukan Testing Pada Data Jadwal", () => {
         cy.get('.btn-danger').click()
     })
 
-        // it("Export Excel", () => {
-        //     cy.visit('/jadwal')
-        //     cy.get("body > div.wrapper > div.content-wrapper > section > div > div > div.col-md-12 > div > div.card-header > h3 > a").click();            
-        // });
+    it("Export Excel", () => {
+        cy.visit('/jadwal')
+        cy.get("body > div.wrapper > div.content-wrapper > section > div > div > div.col-md-12 > div > div.card-header > h3 > a").click();            
+    });
     it("upload Excel", () => {
         cy.visit('/jadwal')
         cy.get('.card-title > .btn-primary').click();
@@ -62,6 +62,7 @@ describe("Melakukan Testing Pada Data Jadwal", () => {
         cy.get('.modal-body > .form-group > input').attachFile('JADWALL.xlsx')
         cy.wait(4050)
         cy.get('form > .modal-content > .modal-footer > .btn-primary').click()
+        cy.get('.odd > :nth-child(3) > .btn').click()
     })
         
     it("Drop Data", () => {
