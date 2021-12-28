@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
+  "devDependencies": {
+    "cypress-file-upload": "^5.0.8"
+=======
   "dependencies": {
     "cypress": "^8.4.1",
     "har-validator": "^5.1.5"
+>>>>>>> 431ad330f39498cb5f7f4eeba8284b26db324e98
   }
 }
