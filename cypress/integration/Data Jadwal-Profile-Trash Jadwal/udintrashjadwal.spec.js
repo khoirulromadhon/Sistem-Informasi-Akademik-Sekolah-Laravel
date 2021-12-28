@@ -10,4 +10,9 @@ describe("Melakukan Testing Pada Trash Jadwal", () => {
         cy.get('#TrashJadwal').click();
         cy.get('.btn-success').click();
     });
+    it("Menghapus Trash Jadwal", () => {
+        cy.get('#ViewTrash').click();
+        cy.get('#TrashJadwal').click();
+        cy.get('.btn-danger').click();
+    });
 });
